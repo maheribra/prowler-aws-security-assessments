@@ -104,6 +104,19 @@ Remaining findings were reviewed and include items requiring additional controls
 
 ---
 
+# Documentation
+
+Detailed documentation:
+
+- [Security Findings](findings.md)
+- [Remediation Actions](remediation.md)
+
+Prowler Reports:
+
+- [Before Hardening Report](reports/iam-scan-before.html)
+- [After Hardening Report](reports/iam-scan-after.html)
+
+
 # Project Structure
 
 ```text
