@@ -2,8 +2,11 @@
 
 ## Overview
 
-This project demonstrates an AWS IAM security assessment using **Prowler v5.34.0**.  
+This project demonstrates an AWS IAM security assessment using **Prowler v5.34.0**.
+
 A security baseline scan was performed, IAM weaknesses were identified, security hardening was applied, and a second scan was conducted to measure improvement.
+
+---
 
 ## Tool
 
@@ -20,7 +23,7 @@ Initial IAM security scan results:
 - ❌ Failed Checks: 20
 - ✅ Passed Checks: 19
 
-Severity Breakdown:
+## Severity Breakdown
 
 | Severity | Findings |
 |----------|----------|
@@ -56,7 +59,7 @@ Second IAM security scan results:
 - ❌ Failed Checks: 13
 - ✅ Passed Checks: 26
 
-Severity Breakdown:
+## Severity Breakdown
 
 | Severity | Findings |
 |----------|----------|
@@ -83,4 +86,31 @@ Security posture improved by reducing failed IAM checks and strengthening accoun
 
 ---
 
+# Final Status
+
+After implementing IAM password policy hardening:
+
+## Before
+
+- Failed Checks: 20
+- Passed Checks: 19
+
+## After
+
+- Failed Checks: 13
+- Passed Checks: 26
+
+Remaining findings were reviewed and include items requiring additional controls such as hardware MFA, enterprise federation, and IAM architecture changes.
+
+---
+
 # Project Structure
+
+```text
+AWS-IAM-Security-Assessment/
+│
+├── README.md
+│
+└── reports/
+    ├── iam-scan-before.html
+    └── iam-scan-after.html
