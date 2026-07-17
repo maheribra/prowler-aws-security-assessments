@@ -1,0 +1,14 @@
+# Prowler generated files
+output/
+
+# AWS temporary files
+*.json
+*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
