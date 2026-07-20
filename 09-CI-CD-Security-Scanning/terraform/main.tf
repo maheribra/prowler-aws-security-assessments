@@ -2,6 +2,12 @@ provider "aws" {
   region = "eu-west-1"
 }
 
+
+resource "aws_kms_key" "s3_key" {
+  description = "S3 encryption key for security scanning demo"
+}
+
+
 resource "aws_s3_bucket" "test_bucket" {
   bucket = "security-scanning-demo-bucket"
 }
@@ -21,7 +27,8 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
 
   rule {
     apply_server_side_encryption_by_default {
-      sse_algorithm = "AES256"
+      sse_algorithm     = "aws:kms"
+      kms_master_key_id = aws_kms_key.s3_key.arn
     }
   }
 }
@@ -49,11 +56,20 @@ resource "aws_s3_bucket_lifecycle_configuration" "lifecycle" {
   bucket = aws_s3_bucket.test_bucket.id
 
   rule {
-    id     = "archive"
+    id     = "security-lifecycle"
     status = "Enabled"
+
+    abort_incomplete_multipart_upload {
+      days_after_initiation = 7
+    }
 
     expiration {
       days = 90
     }
   }
+}
+
+
+resource "aws_s3_bucket_notification" "notifications" {
+  bucket = aws_s3_bucket.test_bucket.id
 }
