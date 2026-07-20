@@ -3,8 +3,37 @@ provider "aws" {
 }
 
 
+data "aws_caller_identity" "current" {}
+
+
 resource "aws_kms_key" "s3_key" {
-  description = "S3 encryption key for security scanning demo"
+  description         = "S3 encryption key for security scanning demo"
+  enable_key_rotation = true
+}
+
+
+resource "aws_kms_key_policy" "s3_key_policy" {
+  key_id = aws_kms_key.s3_key.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+
+    Statement = [
+      {
+        Sid = "EnableRootAccountPermissions"
+
+        Effect = "Allow"
+
+        Principal = {
+          AWS = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"
+        }
+
+        Action = "kms:*"
+
+        Resource = "*"
+      }
+    ]
+  })
 }
 
 
