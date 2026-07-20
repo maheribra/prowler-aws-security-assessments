@@ -35,11 +35,17 @@ prowler-aws-security-assessments/
 │
 └── 09-CI-CD-Security-Scanning/
     │
-    ├── terraform/
-    │   └── main.tf
-    │
-    ├── README.md
-    └── .checkov.yaml
+    ├── screenshots/
+│   ├── 01-github-actions-failed-scan.png
+│   ├── 02-checkov-findings.png
+│   ├── 03-terraform-hardening.png
+│   └── 04-github-actions-passed-scan.png
+│
+├── terraform/
+│   └── main.tf
+│
+├── README.md
+└── .checkov.yaml
 ```
 
 ---
@@ -227,3 +233,21 @@ Possible enhancements:
 This project demonstrates how cloud security controls can be integrated directly into CI/CD pipelines.
 
 By scanning Terraform code before deployment, security issues can be identified and remediated early in the development lifecycle.
+
+## Screenshots
+
+### Initial Security Scan
+
+![Failed Scan](screenshots/01-github-actions-failed-scan.png)
+
+### Checkov Findings
+
+![Checkov Findings](screenshots/02-checkov-findings.png)
+
+### Terraform Security Hardening
+
+![Terraform Hardening](screenshots/03-terraform-hardening.png)
+
+### Final CI/CD Security Pipeline
+
+![Passed Scan](screenshots/04-github-actions-passed-scan.png)
