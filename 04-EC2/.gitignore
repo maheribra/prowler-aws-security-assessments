@@ -1,0 +1,14 @@
+# Prowler reports
+*.csv
+*.json
+*.xlsx
+
+# AWS files
+.aws/
+
+# Python cache
+__pycache__/
+
+# OS files
+.DS_Store
+Thumbs.db
