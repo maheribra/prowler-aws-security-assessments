@@ -7,7 +7,6 @@ on:
   pull_request:
 
 jobs:
-
   security-scan:
     name: IaC Security Scan
     runs-on: ubuntu-latest
@@ -17,14 +16,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-
     - name: Run Checkov
       uses: bridgecrewio/checkov-action@master
       with:
-        directory: terraform
+        directory: 09-CI-CD-Security-Scanning/terraform
 
+    - name: Install tfsec
+      run: |
+        curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
 
     - name: Run tfsec
-      uses: aquasecurity/tfsec-action@v1.0.3
-      with:
-        working_directory: terraform# updated 
+      run: |
+        tfsec 09-CI-CD-Security-Scanning/terraform
