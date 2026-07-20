@@ -19,7 +19,7 @@ jobs:
     - name: Run Checkov
       uses: bridgecrewio/checkov-action@master
       with:
-        directory: terraform
+        directory: 09-CI-CD-Security-Scanning/terraform
 
     - name: Install tfsec
       run: |
@@ -27,4 +27,4 @@ jobs:
 
     - name: Run tfsec
       run: |
-        tfsec terraform
+        tfsec 09-CI-CD-Security-Scanning/terraform
