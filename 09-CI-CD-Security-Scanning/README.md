@@ -27,19 +27,19 @@ The pipeline uses:
 ## Project Structure
 
 ```
-09-CI-CD-Security-Scanning/
+prowler-aws-security-assessments/
 │
 ├── .github/
 │   └── workflows/
 │       └── terraform-security.yml
 │
-├── terraform/
-│   └── main.tf
-│
-├── README.md
-├── findings.md
-├── remediation.md
-└── .checkov.yaml
+└── 09-CI-CD-Security-Scanning/
+    │
+    ├── terraform/
+    │   └── main.tf
+    │
+    ├── README.md
+    └── .checkov.yaml
 ```
 
 ---
@@ -74,8 +74,10 @@ Pipeline steps:
 Workflow file:
 
 ```
-.github/workflows/terraform-security.yml
+../../.github/workflows/terraform-security.yml
 ```
+
+The GitHub Actions workflow is stored at the repository root because GitHub only detects workflows from the root `.github/workflows` directory.
 
 ---
 
