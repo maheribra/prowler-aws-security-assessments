@@ -1,0 +1,20 @@
+Principal Mapper Assessment Results
+
+Graph:
+Nodes: 12
+Administrative principals: 1
+Edges: 0
+Groups: 0
+Tracked policies: 16
+
+Query: who can do s3:*
+Result:
+user/prowler-auditor IS authorized to call action s3:* for resource *
+
+Query: preset privesc *
+Result:
+user/prowler-auditor is an administrative principal
+
+Query: preset wrongadmin
+Result:
+No results
