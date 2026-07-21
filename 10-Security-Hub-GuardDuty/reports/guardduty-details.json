@@ -1,0 +1,134 @@
+{
+    "Findings": [
+        {
+            "AccountId": "018134828551",
+            "Arn": "arn:aws:guardduty:eu-west-1:018134828551:detector/decfc0342b44bff462cc97bbb465a5d8/finding/f8cfc036f2d5c39fed336a93217d0369",
+            "CreatedAt": "2026-07-20T16:48:33.707Z",
+            "Description": "The API GetFindingsV2 was invoked using root credentials from IP address 212.129.80.219.",
+            "Id": "f8cfc036f2d5c39fed336a93217d0369",
+            "Partition": "aws",
+            "Region": "eu-west-1",
+            "Resource": {
+                "AccessKeyDetails": {
+                    "AccessKeyId": "ASIAQIOHLQYDV2BMV4OF",
+                    "PrincipalId": "018134828551",
+                    "UserName": "Root",
+                    "UserType": "Root"
+                },
+                "ResourceType": "AccessKey"
+            },
+            "SchemaVersion": "2.0",
+            "Service": {
+                "Action": {
+                    "ActionType": "AWS_API_CALL",
+                    "AwsApiCallAction": {
+                        "Api": "GetFindingsV2",
+                        "CallerType": "Remote IP",
+                        "RemoteIpDetails": {
+                            "City": {
+                                "CityName": "Dublin"
+                            },
+                            "Country": {
+                                "CountryName": "Ireland"
+                            },
+                            "GeoLocation": {
+                                "Lat": 53.3597,
+                                "Lon": -6.4496
+                            },
+                            "IpAddressV4": "212.129.80.219",
+                            "Organization": {
+                                "Asn": "15751",
+                                "AsnOrg": "Eir Broadband",
+                                "Isp": "Eir Broadband",
+                                "Org": "Eir Broadband"
+                            }
+                        },
+                        "ServiceName": "securityhub.amazonaws.com",
+                        "AffectedResources": {}
+                    }
+                },
+                "Archived": false,
+                "Count": 61,
+                "DetectorId": "decfc0342b44bff462cc97bbb465a5d8",
+                "EventFirstSeen": "2026-07-20T16:42:30.000Z",
+                "EventLastSeen": "2026-07-20T16:49:43.000Z",
+                "ResourceRole": "TARGET",
+                "ServiceName": "guardduty",
+                "AdditionalInfo": {
+                    "Value": "{}",
+                    "Type": "default"
+                },
+                "FeatureName": "CloudTrailManagementEvent"
+            },
+            "Severity": 2.0,
+            "Title": "The API GetFindingsV2 was invoked using root credentials.",
+            "Type": "Policy:IAMUser/RootCredentialUsage",
+            "UpdatedAt": "2026-07-20T16:55:03.865Z"
+        },
+        {
+            "AccountId": "018134828551",
+            "Arn": "arn:aws:guardduty:eu-west-1:018134828551:detector/decfc0342b44bff462cc97bbb465a5d8/finding/78cfc038421ed21212492eeb6d89fe66",
+            "CreatedAt": "2026-07-20T16:51:25.373Z",
+            "Description": "The API GetPolicy was invoked using root credentials from IP address 212.129.80.219.",
+            "Id": "78cfc038421ed21212492eeb6d89fe66",
+            "Partition": "aws",
+            "Region": "us-east-1",
+            "Resource": {
+                "AccessKeyDetails": {
+                    "AccessKeyId": "ASIAQIOHLQYD4GQ7XBZ3",
+                    "PrincipalId": "018134828551",
+                    "UserName": "Root",
+                    "UserType": "Root"
+                },
+                "ResourceType": "AccessKey"
+            },
+            "SchemaVersion": "2.0",
+            "Service": {
+                "Action": {
+                    "ActionType": "AWS_API_CALL",
+                    "AwsApiCallAction": {
+                        "Api": "GetPolicy",
+                        "CallerType": "Remote IP",
+                        "RemoteIpDetails": {
+                            "City": {
+                                "CityName": "Dublin"
+                            },
+                            "Country": {
+                                "CountryName": "Ireland"
+                            },
+                            "GeoLocation": {
+                                "Lat": 53.3597,
+                                "Lon": -6.4496
+                            },
+                            "IpAddressV4": "212.129.80.219",
+                            "Organization": {
+                                "Asn": "15751",
+                                "AsnOrg": "Eir Broadband",
+                                "Isp": "Eir Broadband",
+                                "Org": "Eir Broadband"
+                            }
+                        },
+                        "ServiceName": "iam.amazonaws.com",
+                        "AffectedResources": {}
+                    }
+                },
+                "Archived": false,
+                "Count": 2,
+                "DetectorId": "decfc0342b44bff462cc97bbb465a5d8",
+                "EventFirstSeen": "2026-07-20T16:44:16.000Z",
+                "EventLastSeen": "2026-07-20T16:44:16.000Z",
+                "ResourceRole": "TARGET",
+                "ServiceName": "guardduty",
+                "AdditionalInfo": {
+                    "Value": "{}",
+                    "Type": "default"
+                },
+                "FeatureName": "CloudTrailManagementEvent"
+            },
+            "Severity": 2.0,
+            "Title": "The API GetPolicy was invoked using root credentials.",
+            "Type": "Policy:IAMUser/RootCredentialUsage",
+            "UpdatedAt": "2026-07-20T16:51:25.373Z"
+        }
+    ]
+}
