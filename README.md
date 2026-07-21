@@ -1,14 +1,14 @@
-# AWS Security Assessment Portfolio with Prowler
+# AWS Cloud Security Assessment & Hardening Portfolio
 
 ## Overview
 
-This repository demonstrates a complete AWS cloud security assessment and hardening workflow using **Prowler v5.34.0**.
+This repository demonstrates a practical AWS cloud security assessment, hardening, compliance, infrastructure-as-code, security automation, and continuous security monitoring workflow.
 
-The project focuses on identifying AWS security weaknesses, applying remediation actions, validating improvements, and documenting security findings.
+The project uses **Prowler v5.34.0**, AWS security services, Terraform, CI/CD security scanning, and Python/Boto3 automation to identify security risks, apply remediation, and validate improvements.
 
-The security lifecycle followed:
+The security lifecycle followed throughout the project is:
 
-**Assess → Identify → Remediate → Validate**
+**Assess → Identify → Remediate → Validate → Automate → Monitor**
 
 ---
 
@@ -16,15 +16,16 @@ The security lifecycle followed:
 
 ## 01 - AWS IAM Security Assessment
 
-Security assessment of AWS Identity and Access Management (IAM).
+Security assessment and hardening of AWS Identity and Access Management (IAM).
 
 Covered:
 
-- IAM security checks
-- Password policy review
-- Authentication security
-- Security hardening actions
-- Before and after validation
+* IAM security checks
+* Password policy assessment
+* Authentication security
+* IAM security hardening
+* Before and after validation
+* Security findings and remediation documentation
 
 ---
 
@@ -34,10 +35,12 @@ Security assessment of Amazon S3 storage configurations.
 
 Covered:
 
-- Bucket security review
-- Access control checks
-- Encryption validation
-- Security best practices
+* S3 bucket security
+* Access control configuration
+* Public access security
+* Encryption validation
+* Security best practices
+* Security findings and remediation documentation
 
 ---
 
@@ -47,22 +50,26 @@ Assessment of AWS logging and monitoring configuration.
 
 Covered:
 
-- CloudTrail configuration
-- Multi-region logging
-- Log validation
-- Audit visibility improvements
+* CloudTrail configuration
+* Multi-region logging
+* Log file validation
+* Audit visibility
+* Logging security improvements
+* Security findings and remediation documentation
 
 ---
 
 ## 04 - AWS EC2 Security Assessment
 
-Assessment of Amazon EC2 security configuration.
+Security assessment of Amazon EC2 configuration.
 
 Covered:
 
-- Instance security checks
-- AWS security recommendations
-- Configuration review
+* EC2 security checks
+* Instance configuration review
+* AWS security recommendations
+* Security findings
+* Remediation guidance
 
 ---
 
@@ -72,54 +79,136 @@ Assessment of AWS Key Management Service security.
 
 Covered:
 
-- Encryption key security
-- Key management practices
-- Security recommendations
+* Encryption key security
+* KMS configuration
+* Key management practices
+* Security recommendations
+* Security findings and remediation guidance
 
 ---
 
 ## 06 - CIS AWS Foundations Benchmark Assessment
 
-Compliance assessment against CIS AWS Foundations Benchmark controls.
+Compliance assessment against CIS AWS Foundations Benchmark controls using Prowler.
 
 Covered:
 
-- CIS security checks
-- Compliance gaps
-- Remediation guidance
+* CIS security checks
+* Compliance assessment
+* Failed security controls
+* Security gaps
+* Remediation recommendations
 
 ---
 
 ## 07 - AWS Security Hardening: Before vs After
 
-Final comparison project showing security improvements.
+Demonstrates the security improvement process by comparing the AWS environment before and after hardening.
 
 Covered:
 
-- Initial security posture
-- Security findings
-- Remediation actions
-- Validation results
-- Evidence screenshots
+* Initial security posture
+* Security findings
+* Remediation actions
+* Post-remediation validation
+* Before and after evidence
+* Security improvement documentation
 
 ---
 
-# Tools Used
+## 08 - Terraform Infrastructure as Code Security
 
-- Prowler v5.34.0
-- AWS CLI
-- AWS IAM
-- AWS S3
-- AWS CloudTrail
-- AWS EC2
-- AWS KMS
-- CIS AWS Foundations Benchmark
+Demonstrates secure AWS infrastructure deployment using Terraform.
+
+Covered:
+
+* Infrastructure as Code
+* Secure S3 configuration
+* S3 encryption
+* S3 versioning
+* S3 Block Public Access
+* IAM configuration
+* AWS security best practices
+* Infrastructure security validation
+
+---
+
+## 09 - CI/CD Security Scanning
+
+Demonstrates automated security scanning integrated into a CI/CD workflow.
+
+Covered:
+
+* GitHub Actions
+* Terraform security scanning
+* Infrastructure security validation
+* tfsec security scanning
+* Automated security checks
+* Security findings and remediation
+
+---
+
+## 10 - AWS Security Hub & GuardDuty Integration
+
+Demonstrates AWS-native threat detection and centralized security monitoring.
+
+Covered:
+
+* AWS Security Hub
+* Amazon GuardDuty
+* Security findings
+* Centralized security monitoring
+* AWS security service integration
+* Security assessment and monitoring workflow
+
+---
+
+## 11 - Automated AWS Security Remediation
+
+Demonstrates automated AWS security remediation using Python and Boto3.
+
+Covered:
+
+* Python security automation
+* Boto3 AWS SDK
+* S3 Block Public Access remediation
+* IAM password policy remediation
+* CloudTrail log file validation
+* Automated security hardening
+* Remediation success evidence
+
+The project includes working remediation scripts for:
+
+* `remediate_s3.py`
+* `remediate_iam.py`
+* `remediate_cloudtrail.py`
+
+---
+
+# Tools & Technologies
+
+* Prowler v5.34.0
+* AWS CLI
+* Python
+* Boto3
+* Terraform
+* GitHub Actions
+* tfsec
+* AWS IAM
+* Amazon S3
+* Amazon EC2
+* AWS CloudTrail
+* AWS KMS
+* AWS Security Hub
+* Amazon GuardDuty
+* CIS AWS Foundations Benchmark
+* Git & GitHub
 
 ---
 
 # Repository Structure
 
-```
+```text
 prowler-aws-security-assessments
 │
 ├── 01-IAM
@@ -129,40 +218,124 @@ prowler-aws-security-assessments
 ├── 05-KMS
 ├── 06-CIS-Benchmark
 ├── 07-Before-vs-After
+├── 08-Terraform-IaC
+├── 09-CI-CD-Security-Scanning
+├── 10-Security-Hub-GuardDuty
+├── 11-Automated-Remediation
 └── README.md
 ```
 
 ---
 
-# Skills Demonstrated
+# Security Methodology
 
-This project demonstrates practical skills in:
+The project follows a practical cloud security lifecycle:
 
-- AWS cloud security assessment
-- Security auditing
-- Vulnerability identification
-- IAM hardening
-- Cloud logging and monitoring
-- Encryption security
-- CIS compliance assessment
-- Security documentation
-- Remediation planning
+### 1. Assess
+
+AWS services and infrastructure are assessed using Prowler and other security scanning tools.
+
+### 2. Identify
+
+Security findings, misconfigurations, and compliance gaps are reviewed and documented.
+
+### 3. Remediate
+
+Security controls are improved using AWS configuration changes, Terraform, and automated Python/Boto3 remediation scripts.
+
+### 4. Validate
+
+Security configurations are reviewed and security scans are performed to confirm improvements.
+
+### 5. Automate
+
+Security checks and remediation processes are integrated into infrastructure and CI/CD workflows where appropriate.
+
+### 6. Monitor
+
+AWS Security Hub and GuardDuty provide centralized security findings and continuous threat detection capabilities.
 
 ---
 
-# Security Methodology
+# Skills Demonstrated
 
-The assessment process:
+This portfolio demonstrates practical skills in:
 
-1. Scan AWS environment using Prowler
-2. Review security findings
-3. Identify risks and misconfigurations
-4. Apply AWS security improvements
-5. Run validation scans
-6. Document before and after results
+* AWS cloud security
+* Cloud security assessment
+* Security auditing
+* Vulnerability identification
+* Security hardening
+* IAM security
+* S3 security
+* EC2 security
+* CloudTrail logging and monitoring
+* KMS encryption
+* CIS compliance
+* Infrastructure as Code security
+* Terraform
+* CI/CD security
+* GitHub Actions
+* Security scanning
+* AWS Security Hub
+* Amazon GuardDuty
+* Python security automation
+* Boto3
+* Automated remediation
+* Security documentation
+* Risk identification
+* Remediation planning
+* Security validation
+
+---
+
+# Security Workflow
+
+```text
+AWS Environment
+       │
+       ▼
+Security Assessment
+       │
+       ▼
+Prowler / Security Scanning
+       │
+       ▼
+Identify Findings
+       │
+       ▼
+Remediation
+       │
+       ├── AWS Security Configuration
+       ├── Terraform IaC
+       └── Python / Boto3 Automation
+       │
+       ▼
+Validation
+       │
+       ▼
+CI/CD Security Scanning
+       │
+       ▼
+Security Hub + GuardDuty Monitoring
+```
 
 ---
 
 # Outcome
 
-This portfolio demonstrates the ability to assess AWS environments, identify security risks, apply cloud security best practices, and document improvements using industry security tooling.
+This portfolio demonstrates a practical approach to AWS cloud security by combining security assessment, compliance validation, infrastructure security, CI/CD scanning, AWS-native security services, and automated remediation.
+
+The project demonstrates the ability to:
+
+* Assess AWS cloud environments
+* Identify security risks and misconfigurations
+* Apply AWS security best practices
+* Secure infrastructure using Terraform
+* Integrate security into CI/CD workflows
+* Use AWS Security Hub and GuardDuty for security monitoring
+* Automate remediation using Python and Boto3
+* Validate security improvements
+* Document findings and remediation actions
+
+This portfolio represents an end-to-end AWS cloud security workflow focused on **assessment, hardening, automation, and continuous security monitoring**.
