@@ -1,0 +1,39 @@
+{
+    "SecurityGroups": [
+        {
+            "GroupId": "sg-08ca4aa43851a6968",
+            "IpPermissionsEgress": [
+                {
+                    "IpProtocol": "-1",
+                    "UserIdGroupPairs": [],
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                }
+            ],
+            "VpcId": "vpc-057bc9c2d188e7ed6",
+            "SecurityGroupArn": "arn:aws:ec2:eu-west-1:018134828551:security-group/sg-08ca4aa43851a6968",
+            "OwnerId": "018134828551",
+            "GroupName": "default",
+            "Description": "default VPC security group",
+            "IpPermissions": [
+                {
+                    "IpProtocol": "-1",
+                    "UserIdGroupPairs": [
+                        {
+                            "UserId": "018134828551",
+                            "GroupId": "sg-08ca4aa43851a6968"
+                        }
+                    ],
+                    "IpRanges": [],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                }
+            ]
+        }
+    ]
+}

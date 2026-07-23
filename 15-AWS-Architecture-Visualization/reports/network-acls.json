@@ -1,0 +1,58 @@
+{
+    "NetworkAcls": [
+        {
+            "Associations": [
+                {
+                    "NetworkAclAssociationId": "aclassoc-062373207f47f467e",
+                    "NetworkAclId": "acl-03d0a1117cd37e5bd",
+                    "SubnetId": "subnet-0735ae742599cfc62"
+                },
+                {
+                    "NetworkAclAssociationId": "aclassoc-013aff991ecf3fb26",
+                    "NetworkAclId": "acl-03d0a1117cd37e5bd",
+                    "SubnetId": "subnet-006d9efc34282321b"
+                },
+                {
+                    "NetworkAclAssociationId": "aclassoc-0c7d59c0e731b7dfa",
+                    "NetworkAclId": "acl-03d0a1117cd37e5bd",
+                    "SubnetId": "subnet-0dd175c3dcfe276a9"
+                }
+            ],
+            "Entries": [
+                {
+                    "CidrBlock": "0.0.0.0/0",
+                    "Egress": true,
+                    "Protocol": "-1",
+                    "RuleAction": "allow",
+                    "RuleNumber": 100
+                },
+                {
+                    "CidrBlock": "0.0.0.0/0",
+                    "Egress": true,
+                    "Protocol": "-1",
+                    "RuleAction": "deny",
+                    "RuleNumber": 32767
+                },
+                {
+                    "CidrBlock": "0.0.0.0/0",
+                    "Egress": false,
+                    "Protocol": "-1",
+                    "RuleAction": "allow",
+                    "RuleNumber": 100
+                },
+                {
+                    "CidrBlock": "0.0.0.0/0",
+                    "Egress": false,
+                    "Protocol": "-1",
+                    "RuleAction": "deny",
+                    "RuleNumber": 32767
+                }
+            ],
+            "IsDefault": true,
+            "NetworkAclId": "acl-03d0a1117cd37e5bd",
+            "Tags": [],
+            "VpcId": "vpc-057bc9c2d188e7ed6",
+            "OwnerId": "018134828551"
+        }
+    ]
+}
