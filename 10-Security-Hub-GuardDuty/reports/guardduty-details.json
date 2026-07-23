@@ -10,7 +10,7 @@
             "Region": "eu-west-1",
             "Resource": {
                 "AccessKeyDetails": {
-                    "AccessKeyId": "ASIAQIOHLQYDV2BMV4OF",
+                    "AccessKeyId": "[REDACTED]",
                     "PrincipalId": "018134828551",
                     "UserName": "Root",
                     "UserType": "Root"
@@ -75,7 +75,7 @@
             "Region": "us-east-1",
             "Resource": {
                 "AccessKeyDetails": {
-                    "AccessKeyId": "ASIAQIOHLQYD4GQ7XBZ3",
+                    "AccessKeyId": "[REDACTED]",
                     "PrincipalId": "018134828551",
                     "UserName": "Root",
                     "UserType": "Root"
