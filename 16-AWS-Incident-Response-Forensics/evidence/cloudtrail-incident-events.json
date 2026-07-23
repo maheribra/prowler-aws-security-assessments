@@ -1,0 +1,48 @@
+{
+    "Events": [
+        {
+            "EventId": "e11923af-311a-436c-a3e5-588e988559f7",
+            "EventName": "DescribeSecurityGroups",
+            "ReadOnly": "true",
+            "AccessKeyId": "AKIAQIOHLQYDZI3TPU54",
+            "EventTime": "2026-07-23T20:34:13+01:00",
+            "EventSource": "ec2.amazonaws.com",
+            "Username": "incident-response-test-user",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDAQIOHLQYDQR6Z4LPX4\",\"arn\":\"arn:aws:iam::018134828551:user/incident-response-test-user\",\"accountId\":\"018134828551\",\"accessKeyId\":\"AKIAQIOHLQYDZI3TPU54\",\"userName\":\"incident-response-test-user\"},\"eventTime\":\"2026-07-23T19:34:13Z\",\"eventSource\":\"ec2.amazonaws.com\",\"eventName\":\"DescribeSecurityGroups\",\"awsRegion\":\"eu-west-1\",\"sourceIPAddress\":\"212.129.77.121\",\"userAgent\":\"aws-cli/2.35.24 md/awscrt#0.35.0 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.14.6 md/pyimpl#CPython m/n,Z,E,C,b cfg/retry-mode#standard md/installer#exe sid/62c2059748d3 md/prompt#off md/command#ec2.describe-security-groups\",\"errorCode\":\"Client.UnauthorizedOperation\",\"errorMessage\":\"You are not authorized to perform this operation. User: arn:aws:iam::018134828551:user/incident-response-test-user is not authorized to perform: ec2:DescribeSecurityGroups because no identity-based policy allows the ec2:DescribeSecurityGroups action\",\"requestParameters\":{\"securityGroupSet\":{},\"securityGroupIdSet\":{},\"filterSet\":{}},\"responseElements\":null,\"requestID\":\"9bdd352e-c470-4410-b8ae-0784e1940f66\",\"eventID\":\"e11923af-311a-436c-a3e5-588e988559f7\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"018134828551\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"ec2.eu-west-1.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "d7408b7a-aa36-490f-b502-7de6d20cd94e",
+            "EventName": "DescribeInstances",
+            "ReadOnly": "true",
+            "AccessKeyId": "AKIAQIOHLQYDZI3TPU54",
+            "EventTime": "2026-07-23T20:33:53+01:00",
+            "EventSource": "ec2.amazonaws.com",
+            "Username": "incident-response-test-user",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDAQIOHLQYDQR6Z4LPX4\",\"arn\":\"arn:aws:iam::018134828551:user/incident-response-test-user\",\"accountId\":\"018134828551\",\"accessKeyId\":\"AKIAQIOHLQYDZI3TPU54\",\"userName\":\"incident-response-test-user\"},\"eventTime\":\"2026-07-23T19:33:53Z\",\"eventSource\":\"ec2.amazonaws.com\",\"eventName\":\"DescribeInstances\",\"awsRegion\":\"eu-west-1\",\"sourceIPAddress\":\"212.129.77.121\",\"userAgent\":\"aws-cli/2.35.24 md/awscrt#0.35.0 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.14.6 md/pyimpl#CPython m/n,Z,E,C,b cfg/retry-mode#standard md/installer#exe sid/62c2059748d3 md/prompt#off md/command#ec2.describe-instances\",\"errorCode\":\"Client.UnauthorizedOperation\",\"errorMessage\":\"You are not authorized to perform this operation. User: arn:aws:iam::018134828551:user/incident-response-test-user is not authorized to perform: ec2:DescribeInstances because no identity-based policy allows the ec2:DescribeInstances action\",\"requestParameters\":{\"instancesSet\":{},\"filterSet\":{}},\"responseElements\":null,\"requestID\":\"f833348c-6093-4915-9334-6a5094cc9ceb\",\"eventID\":\"d7408b7a-aa36-490f-b502-7de6d20cd94e\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"018134828551\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"ec2.eu-west-1.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "702e3277-71ee-4517-aa06-6624946186a0",
+            "EventName": "ListBuckets",
+            "ReadOnly": "true",
+            "AccessKeyId": "AKIAQIOHLQYDZI3TPU54",
+            "EventTime": "2026-07-23T20:33:46+01:00",
+            "EventSource": "s3.amazonaws.com",
+            "Username": "incident-response-test-user",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDAQIOHLQYDQR6Z4LPX4\",\"arn\":\"arn:aws:iam::018134828551:user/incident-response-test-user\",\"accountId\":\"018134828551\",\"accessKeyId\":\"AKIAQIOHLQYDZI3TPU54\",\"userName\":\"incident-response-test-user\"},\"eventTime\":\"2026-07-23T19:33:46Z\",\"eventSource\":\"s3.amazonaws.com\",\"eventName\":\"ListBuckets\",\"awsRegion\":\"eu-west-1\",\"sourceIPAddress\":\"212.129.77.121\",\"userAgent\":\"[aws-cli/2.35.24 md/awscrt#0.35.0 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.14.6 md/pyimpl#CPython m/n,Z,E,C,b cfg/retry-mode#standard md/installer#exe sid/62c2059748d3 md/prompt#off md/command#s3api.list-buckets]\",\"errorCode\":\"AccessDenied\",\"errorMessage\":\"User: arn:aws:iam::018134828551:user/incident-response-test-user is not authorized to perform: s3:ListAllMyBuckets because no identity-based policy allows the s3:ListAllMyBuckets action\",\"requestParameters\":{\"Host\":\"s3.eu-west-1.amazonaws.com\"},\"responseElements\":null,\"additionalEventData\":{\"SignatureVersion\":\"SigV4\",\"CipherSuite\":\"TLS_CHACHA20_POLY1305_SHA256\",\"bytesTransferredIn\":0,\"AuthenticationMethod\":\"AuthHeader\",\"x-amz-id-2\":\"JsADcT7vIbdt/sDWFAu9jW1W8tlH2xVsGePZMbuFNBQjGvhCrJkmD5xC+BuZPaqqcX7yVOLbPO/jZOznhOzXjalh1Uj1sn1v\",\"bytesTransferredOut\":435},\"requestID\":\"W60NBBGRYS360SM9\",\"eventID\":\"702e3277-71ee-4517-aa06-6624946186a0\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"018134828551\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_CHACHA20_POLY1305_SHA256\",\"clientProvidedHostHeader\":\"s3.eu-west-1.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "9303719b-ed7a-43ad-883e-6d98a77a7dc3",
+            "EventName": "GetCallerIdentity",
+            "ReadOnly": "true",
+            "AccessKeyId": "AKIAQIOHLQYDZI3TPU54",
+            "EventTime": "2026-07-23T20:30:56+01:00",
+            "EventSource": "sts.amazonaws.com",
+            "Username": "incident-response-test-user",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDAQIOHLQYDQR6Z4LPX4\",\"arn\":\"arn:aws:iam::018134828551:user/incident-response-test-user\",\"accountId\":\"018134828551\",\"accessKeyId\":\"AKIAQIOHLQYDZI3TPU54\",\"userName\":\"incident-response-test-user\"},\"eventTime\":\"2026-07-23T19:30:56Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"GetCallerIdentity\",\"awsRegion\":\"eu-west-1\",\"sourceIPAddress\":\"212.129.77.121\",\"userAgent\":\"aws-cli/2.35.24 md/awscrt#0.35.0 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.14.6 md/pyimpl#CPython m/Z,E,n,b cfg/retry-mode#standard md/installer#exe sid/62c2059748d3 md/prompt#off md/command#sts.get-caller-identity\",\"requestParameters\":null,\"responseElements\":null,\"additionalEventData\":{\"ExtendedRequestId\":\"MTpldS13ZXN0LTE6UzoxNzg0ODM1MDU2OTcwOlI6bGYxTmRaV3E=\",\"RequestDetails\":{\"awsServingRegion\":\"eu-west-1\",\"endpointType\":\"regional\"}},\"requestID\":\"f3d2ca30-f64c-4c8f-888f-0791e4197093\",\"eventID\":\"9303719b-ed7a-43ad-883e-6d98a77a7dc3\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"018134828551\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"sts.eu-west-1.amazonaws.com\"}}"
+        }
+    ]
+}

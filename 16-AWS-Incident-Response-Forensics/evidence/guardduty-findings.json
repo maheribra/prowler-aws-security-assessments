@@ -1,0 +1,134 @@
+{
+    "Findings": [
+        {
+            "AccountId": "018134828551",
+            "Arn": "arn:aws:guardduty:eu-west-1:018134828551:detector/decfc0342b44bff462cc97bbb465a5d8/finding/f8cfc036f2d5c39fed336a93217d0369",
+            "CreatedAt": "2026-07-20T16:48:33.707Z",
+            "Description": "The API DescribeRegions was invoked using root credentials from IP address 212.129.79.123.",
+            "Id": "f8cfc036f2d5c39fed336a93217d0369",
+            "Partition": "aws",
+            "Region": "eu-west-1",
+            "Resource": {
+                "AccessKeyDetails": {
+                    "AccessKeyId": "ASIAQIOHLQYD3OECDRXJ",
+                    "PrincipalId": "018134828551",
+                    "UserName": "Root",
+                    "UserType": "Root"
+                },
+                "ResourceType": "AccessKey"
+            },
+            "SchemaVersion": "2.0",
+            "Service": {
+                "Action": {
+                    "ActionType": "AWS_API_CALL",
+                    "AwsApiCallAction": {
+                        "Api": "DescribeRegions",
+                        "CallerType": "Remote IP",
+                        "RemoteIpDetails": {
+                            "City": {
+                                "CityName": "Dublin"
+                            },
+                            "Country": {
+                                "CountryName": "Ireland"
+                            },
+                            "GeoLocation": {
+                                "Lat": 53.2845,
+                                "Lon": -6.3666
+                            },
+                            "IpAddressV4": "212.129.79.123",
+                            "Organization": {
+                                "Asn": "15751",
+                                "AsnOrg": "Eir Broadband",
+                                "Isp": "Eir Broadband",
+                                "Org": "Eir Broadband"
+                            }
+                        },
+                        "ServiceName": "ec2.amazonaws.com",
+                        "AffectedResources": {}
+                    }
+                },
+                "Archived": false,
+                "Count": 214,
+                "DetectorId": "decfc0342b44bff462cc97bbb465a5d8",
+                "EventFirstSeen": "2026-07-20T16:42:30.000Z",
+                "EventLastSeen": "2026-07-23T18:28:16.000Z",
+                "ResourceRole": "TARGET",
+                "ServiceName": "guardduty",
+                "AdditionalInfo": {
+                    "Value": "{}",
+                    "Type": "default"
+                },
+                "FeatureName": "CloudTrailManagementEvent"
+            },
+            "Severity": 2.0,
+            "Title": "The API DescribeRegions was invoked using root credentials.",
+            "Type": "Policy:IAMUser/RootCredentialUsage",
+            "UpdatedAt": "2026-07-23T18:35:21.868Z"
+        },
+        {
+            "AccountId": "018134828551",
+            "Arn": "arn:aws:guardduty:eu-west-1:018134828551:detector/decfc0342b44bff462cc97bbb465a5d8/finding/78cfc038421ed21212492eeb6d89fe66",
+            "CreatedAt": "2026-07-20T16:51:25.373Z",
+            "Description": "The API ListAccountAliases was invoked using root credentials from IP address 212.129.79.123.",
+            "Id": "78cfc038421ed21212492eeb6d89fe66",
+            "Partition": "aws",
+            "Region": "us-east-1",
+            "Resource": {
+                "AccessKeyDetails": {
+                    "AccessKeyId": "ASIAQIOHLQYDWUVEOTPH",
+                    "PrincipalId": "018134828551",
+                    "UserName": "Root",
+                    "UserType": "Root"
+                },
+                "ResourceType": "AccessKey"
+            },
+            "SchemaVersion": "2.0",
+            "Service": {
+                "Action": {
+                    "ActionType": "AWS_API_CALL",
+                    "AwsApiCallAction": {
+                        "Api": "ListAccountAliases",
+                        "CallerType": "Remote IP",
+                        "RemoteIpDetails": {
+                            "City": {
+                                "CityName": "Dublin"
+                            },
+                            "Country": {
+                                "CountryName": "Ireland"
+                            },
+                            "GeoLocation": {
+                                "Lat": 53.2845,
+                                "Lon": -6.3666
+                            },
+                            "IpAddressV4": "212.129.79.123",
+                            "Organization": {
+                                "Asn": "15751",
+                                "AsnOrg": "Eir Broadband",
+                                "Isp": "Eir Broadband",
+                                "Org": "Eir Broadband"
+                            }
+                        },
+                        "ServiceName": "iam.amazonaws.com",
+                        "AffectedResources": {}
+                    }
+                },
+                "Archived": false,
+                "Count": 60,
+                "DetectorId": "decfc0342b44bff462cc97bbb465a5d8",
+                "EventFirstSeen": "2026-07-20T16:44:16.000Z",
+                "EventLastSeen": "2026-07-23T17:12:38.000Z",
+                "ResourceRole": "TARGET",
+                "ServiceName": "guardduty",
+                "AdditionalInfo": {
+                    "Value": "{}",
+                    "Type": "default"
+                },
+                "FeatureName": "CloudTrailManagementEvent"
+            },
+            "Severity": 2.0,
+            "Title": "The API ListAccountAliases was invoked using root credentials.",
+            "Type": "Policy:IAMUser/RootCredentialUsage",
+            "UpdatedAt": "2026-07-23T17:19:16.303Z"
+        }
+    ]
+}
